@@ -22,7 +22,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+client = Vultr::Client.new(api_key: ENV["VULTR_API_KEY"])
+client.connection.get("account", {}, { Authorization: "Bearer #{client.api_key}" })
+
+client.applications.list
+client.regions.list
+
+instance = client.instances.create({})
+instance.name
+```
 
 ## Development
 
