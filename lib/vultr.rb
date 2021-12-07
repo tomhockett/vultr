@@ -10,4 +10,9 @@ module Vultr
   autoload :Client, "vultr/client"
   autoload :Error, "vultr/error"
   autoload :Object, "vultr/object"
+
+  autoload :Account, "vultr/objects/account"
+  autoload :Instance, "vultr/objects/instance"
+  autoload :Collection, "vultr/collection"
+  autoload :Plan, "vultr/objects/plan"
 end
