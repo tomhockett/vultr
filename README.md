@@ -26,6 +26,8 @@ Or install it yourself as:
 client = Vultr::Client.new(api_key: ENV["VULTR_API_KEY"])
 client.connection.get("account", {}, { Authorization: "Bearer #{client.api_key}" })
 
+Vultr::Collection from_response client.connection.get("plans", { per_page: 5 }, { Authorization: "Bearer #{client.api_key}" }), key: "plans", type: Vultr::Plan
+
 client.applications.list
 client.regions.list
 
