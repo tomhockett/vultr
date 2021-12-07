@@ -1,4 +1,11 @@
+# frozen_string_literal: true
+
 module Vultr
+  # Vultr::Collection.from_response client.connection.get(
+  #   "plans", { per_page: 5 },
+  #   { Authorization: "Bearer #{client.api_key}" }
+  # ),
+  # key: "plans", type: Vultr::Plan
   class Collection
     attr_reader :data, :total, :next_cursor, :prev_cursor
 
